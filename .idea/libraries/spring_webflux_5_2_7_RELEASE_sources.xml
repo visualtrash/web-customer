@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="spring-webflux-5.2.7.RELEASE-sources">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-webflux-5.2.7.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
