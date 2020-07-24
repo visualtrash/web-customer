@@ -1,5 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
+
 <!DOCTYPE html>
 
 <html>
@@ -51,7 +52,12 @@
                 <c:url var="updateLink" value="/customer/showFormForUpdate">
                     <c:param name="customerId" value="${tempCustomer.id}"/>
                 </c:url>
-                
+
+                <%-- delete link with id customer--%>
+                <c:url var="deleteLink" value="/customer/delete">
+                    <c:param name="customerId" value="${tempCustomer.id}"/>
+                </c:url>
+
                 <tr>
                     <td> ${tempCustomer.firstName} </td>
                     <td> ${tempCustomer.lastName} </td>
@@ -60,6 +66,11 @@
                     <td>
                             <%-- display update link --%>
                         <a href="${updateLink}">Update</a>
+                        |
+                            <%-- display update link --%>
+                        <a href="${deleteLink}"
+                           onclick="if(!(confirm('Are you sure to delete?'))) return false">Delete</a>
+
                     </td>
                 </tr>
 
